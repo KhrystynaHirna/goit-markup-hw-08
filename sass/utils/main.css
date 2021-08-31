@@ -27,7 +27,7 @@
   margin: 0;
 }
 
-.page-header__container, .header-info, .header-info__item, .header-info__link, .navigation__list, .advantage-list, .advantage-list__icon, .advantage-list__svg, .product-list, .team-list, .social-icons, .social-icons__link, .clients-list, .clients-list__link, .footer__container, .subscribe-form, .subscribe-form .primary-button, .form-field, .form-field__input, .form-field__policy, .form-field__checkbox-icon, .portfolio-filter, .portfolio-items, .close-button {
+.page-header__container, .header-info, .header-info__item, .header-info__link, .navigation__list, .advantage-list__icon, .advantage-list__svg, .product-list, .team-list, .social-icons, .social-icons__link, .clients-list, .clients-list__link, .footer__container, .subscribe-form, .subscribe-form .primary-button, .form-field, .form-field__input, .form-field__policy, .form-field__checkbox-icon, .portfolio-filter, .portfolio-items, .close-button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -426,9 +426,6 @@ summary {
 
 .advantage-list {
   padding: 0;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .advantage-list__item {

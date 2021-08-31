@@ -2,7 +2,6 @@
 
 .advantage-list {
   padding: 0;
-  @include flex ($jc: space-between);
   @extend %list;
 }
 .advantage-list__item {
