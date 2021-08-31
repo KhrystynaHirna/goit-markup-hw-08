@@ -2,11 +2,10 @@
 //  social-icons 
 
 .social-icons {
-  padding: 0 32px;
-  margin-bottom: 30px;
-  list-style: none;
-  
+  padding: 0 122px 24px;
 
+  list-style: none;
+  @include flex ($jc:center, $ai:center);
   &--footer {
   padding: 0;
  }
@@ -19,9 +18,8 @@
 .social-icons__link {
   width: 44px;
   height: 44px;
-  
   border-radius: 50%;
-
+  @include flex ($jc:center, $ai:center);
   fill: var(--icon-color);
   @include transition (fill);
   @include transition (background-color);

@@ -22,8 +22,6 @@
     background-size: 480px;
   }
  }
- 
-
 
 // Advantage-section
 .advantage-section {
@@ -34,17 +32,11 @@
 }
 
 // Product-section
-.product-section {
-  @media screen and (min-width:768px) {
-    padding: 47px 0 94px 0;
-  }
-}
-
 
 // Team-section
 .team-section {
   background-color: var(--team-background-color);
-  padding: 94px 0;
+  padding: 60px 0;
 }
 .team-section__container {
   @extend .container;
