@@ -10,7 +10,7 @@
   line-height: 1.1;
   letter-spacing: 0.02em;
 
-  @include flex ($ai: center);
+
   @extend %list;
 }
 .navigation__item:not(:last-child) {

@@ -3,7 +3,7 @@
 
 .clients-list {
   list-style: none;
-  @include flex ($jc: space-between, $ai: center );
+ 
   padding: 0 0 94px;
   margin: 0;
 
@@ -14,7 +14,7 @@
   @include border (1px, var(--icon-color));
   border-radius: 4px;
   fill: var(--icon-color);
-  @include flex ($jc: center, $ai: center );
+ 
   @include transition (fill);
   @include transition (border-color);
 

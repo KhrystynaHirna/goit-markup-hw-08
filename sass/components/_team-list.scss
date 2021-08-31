@@ -3,7 +3,6 @@
 // Team-section
 
 .team-list {
-  @include flex ($jc: space-between);
   padding-left: 0;
 
   @extend %list;

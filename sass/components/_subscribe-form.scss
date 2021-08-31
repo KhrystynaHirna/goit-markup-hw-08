@@ -1,10 +1,9 @@
 
 // Footer subscribe-form
 .subscribe-form {
-  @extend %d-flex;
 
   & .primary-button {
-  @include flex ($ai: center);
+  
   padding: 0;
   margin-left: 12px;
   }

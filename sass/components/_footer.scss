@@ -12,7 +12,7 @@
   color: var(--body-background-color);
 }
 .footer__container {
-  @include flex ($ai: baseline);
+  
   @extend .container;
 }
 .footer__item--first {

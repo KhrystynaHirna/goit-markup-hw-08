@@ -4,7 +4,7 @@
   @include border ($use-bb:(var(--header-border-color)));
 }
 .page-header__container {
-  @include flex ($ai: center);
+ 
   @extend .container;
 }  
 
@@ -17,11 +17,11 @@
 
   padding: 0;
   margin-left: auto;
-  @include flex ($ai: center);
+  
 }
 .header-info__item {
   color: var(--paragraph-text-color);
-  @include flex ($ai: center);
+  
 
   &:hover, &:focus {
     color: var(--accent-color);  

@@ -52,7 +52,7 @@
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  @include flex ($ai: center);
+ 
 
   background: var(--body-background-color);
   @include border (1px,rgba(0, 0, 0, 0.1));

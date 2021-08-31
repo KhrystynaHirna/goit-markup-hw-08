@@ -27,7 +27,7 @@
   margin: 0;
 }
 
-.page-header__container, .header-info, .header-info__item, .header-info__link, .navigation__list, .advantage-list__icon, .advantage-list__svg, .product-list, .team-list, .social-icons, .social-icons__link, .clients-list, .clients-list__link, .footer__container, .subscribe-form, .subscribe-form .primary-button, .form-field, .form-field__input, .form-field__policy, .form-field__checkbox-icon, .portfolio-filter, .portfolio-items, .close-button {
+.header-info__link, .advantage-list__icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -294,12 +294,6 @@ summary {
   border-bottom: var(--header-border-color);
 }
 
-.page-header__container {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 .header-info {
   font-weight: 500;
   font-size: 14px;
@@ -307,16 +301,10 @@ summary {
   letter-spacing: 0.02em;
   padding: 0;
   margin-left: auto;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .header-info__item {
   color: var(--paragraph-text-color);
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .header-info__item:hover, .header-info__item:focus {
@@ -356,9 +344,6 @@ summary {
   font-size: 14px;
   line-height: 1.1;
   letter-spacing: 0.02em;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .navigation__item:not(:last-child) {
@@ -426,10 +411,7 @@ summary {
 
 .advantage-list {
   padding: 0;
-}
-
-.advantage-list__item {
-  max-width: 270px;
+  text-align: center;
 }
 
 .advantage-list__title {
@@ -445,69 +427,68 @@ summary {
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
-  margin-top: 0;
-  max-width: 270px;
+  margin: 0;
+  text-align: start;
+}
+
+.advantage-list__item {
+  margin-bottom: 30px;
 }
 
 .advantage-list__icon {
   background-color: var(--team-background-color);
   color: currentColor;
-  width: 270px;
+  width: 450px;
   height: 120px;
   border-radius: 4px;
+  margin-bottom: 30px;
+  padding: 0;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 30px;
-  padding: 0;
 }
 
-.advantage-list__svg {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  text-align: center;
+@media screen and (min-width: 768px) {
+  .product-list {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
-.product-list {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding-left: 0;
-  padding-right: 0;
+@media screen and (min-width: 768px) {
+  .product-list__item {
+    position: relative;
+  }
 }
 
-.product-list__item {
-  position: relative;
+@media screen and (min-width: 768px) {
+  .product-list__overlay {
+    width: 370px;
+    height: 70px;
+    position: absolute;
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.8)), to(rgba(47, 48, 58, 0.8)));
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8));
+    bottom: 0;
+  }
 }
 
-.product-list__overlay {
-  width: 370px;
-  height: 70px;
-  position: absolute;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.8)), to(rgba(47, 48, 58, 0.8)));
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8));
-  bottom: 0;
-}
-
-.product-list__text {
-  text-transform: uppercase;
-  color: var(--body-background-color);
-  font-size: 14px;
-  line-height: 1.14;
-  text-align: center;
-  letter-spacing: 0.03em;
-  padding: 27px 82px;
-  margin: 0;
+@media screen and (min-width: 768px) {
+  .product-list__text {
+    text-transform: uppercase;
+    color: var(--body-background-color);
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    letter-spacing: 0.03em;
+    padding: 27px 82px;
+    margin: 0;
+  }
 }
 
 .team-list {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   padding-left: 0;
 }
 
@@ -540,12 +521,6 @@ summary {
   padding: 0 32px;
   margin-bottom: 30px;
   list-style: none;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .social-icons--footer {
@@ -559,12 +534,6 @@ summary {
 .social-icons__link {
   width: 44px;
   height: 44px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   border-radius: 50%;
   fill: var(--icon-color);
   -webkit-transition: 250ms var(--timing-function);
@@ -594,14 +563,13 @@ summary {
   background-color: var(--icon-background-color);
 }
 
+.social-icons__link--with-background {
+  fill: var(--body-background-color);
+  background-color: var(--icon-background-color);
+}
+
 .clients-list {
   list-style: none;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   padding: 0 0 94px;
   margin: 0;
 }
@@ -614,12 +582,6 @@ summary {
   border: 1px solid var(--icon-color);
   border-radius: 4px;
   fill: var(--icon-color);
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-transition: 250ms var(--timing-function);
   transition: 250ms var(--timing-function);
   -webkit-transition-property: fill;
@@ -645,12 +607,6 @@ summary {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--body-background-color);
-}
-
-.footer__container {
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
 }
 
 .footer__item--first {
@@ -696,9 +652,6 @@ summary {
 }
 
 .subscribe-form .primary-button {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   padding: 0;
   margin-left: 12px;
 }
@@ -795,10 +748,6 @@ summary {
 }
 
 .form-field {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   width: 100%;
   position: relative;
 }
@@ -884,15 +833,6 @@ summary {
   margin-bottom: 20px;
 }
 
-.form-field__policy {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 .form-field__checkbox {
   appearance: none;
   -webkit-appearance: none;
@@ -918,12 +858,6 @@ summary {
   border-width: 2px;
   border-color: var(--logo-black-color);
   border: 2px solid var(--logo-black-color);
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .form-field__checkbox-text {
@@ -943,9 +877,6 @@ summary {
 }
 
 .portfolio-filter {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   margin-bottom: 50px;
   padding: 0 0 50px;
 }
@@ -955,8 +886,6 @@ summary {
 }
 
 .portfolio-items {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   padding-right: 0;
   padding-left: 0;
 }
@@ -1064,25 +993,25 @@ body {
   font-family: 'Roboto', 'Arial', sans-serif;
 }
 
-.container, .page-header__container, .footer__container, .advantage-section__container, .product-section__container, .team-section__container, .clients-section__container, .portfolio-section__container {
+.container, .page-header__container, .footer__container, .advantage-section__container, .team-section__container, .clients-section__container, .portfolio-section__container {
   padding: 0 15px;
   margin: 0 auto;
 }
 
 @media screen and (min-width: 480px) {
-  .container, .page-header__container, .footer__container, .advantage-section__container, .product-section__container, .team-section__container, .clients-section__container, .portfolio-section__container {
+  .container, .page-header__container, .footer__container, .advantage-section__container, .team-section__container, .clients-section__container, .portfolio-section__container {
     min-width: 480px;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .container, .page-header__container, .footer__container, .advantage-section__container, .product-section__container, .team-section__container, .clients-section__container, .portfolio-section__container {
+  .container, .page-header__container, .footer__container, .advantage-section__container, .team-section__container, .clients-section__container, .portfolio-section__container {
     min-width: 768px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .container, .page-header__container, .footer__container, .advantage-section__container, .product-section__container, .team-section__container, .clients-section__container, .portfolio-section__container {
+  .container, .page-header__container, .footer__container, .advantage-section__container, .team-section__container, .clients-section__container, .portfolio-section__container {
     min-width: 1200px;
   }
 }
@@ -1119,21 +1048,28 @@ img {
   background-color: var(--footor-background-color);
   color: var(--body-background-color);
   margin-top: 0;
-  padding: 118px 0;
+  padding: 118px 0 198px;
   text-align: center;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../img/hero.jpg);
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 480px;
+}
+
+@media screen and (min-width: 480px) {
+  .main-section {
+    background-size: 480px;
+  }
 }
 
 .advantage-section {
   padding-top: 60px;
 }
 
-.product-section {
-  padding: 47px 0 94px 0;
+@media screen and (min-width: 768px) {
+  .product-section {
+    padding: 47px 0 94px 0;
+  }
 }
 
 .team-section {
@@ -1203,9 +1139,6 @@ img {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   background: var(--body-background-color);
   border-width: 1px;
   border-color: rgba(0, 0, 0, 0.1);

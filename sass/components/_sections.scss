@@ -1,11 +1,10 @@
 
-
 // Hero-section
 .main-section {
   background-color: var(--footor-background-color);
   color: var(--body-background-color);
   margin-top: 0;
-  padding: 118px 0;
+  padding: 118px 0 198px;
   text-align: center;
 
   background-image: linear-gradient(
@@ -17,8 +16,13 @@
 
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 480px;
-}
+ }
+ .main-section {
+   @media screen and (min-width:480px) {
+    background-size: 480px;
+  }
+ }
+ 
 
 
 // Advantage-section
@@ -31,11 +35,11 @@
 
 // Product-section
 .product-section {
-  padding: 47px 0 94px 0;
+  @media screen and (min-width:768px) {
+    padding: 47px 0 94px 0;
+  }
 }
-.product-section__container {
-  @extend .container;
-}
+
 
 // Team-section
 .team-section {

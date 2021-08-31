@@ -2,7 +2,7 @@
 // Portfolio
 
 .portfolio-filter {
-  @include flex ($jc: center);
+  
   margin-bottom: 50px;
   padding: 0 0 50px;
 
@@ -17,7 +17,7 @@
 // Portfolio-cards
 
 .portfolio-items {
-  @include flex ($fw: wrap);
+  
   padding-right: 0;
   padding-left: 0;
   @extend %list;

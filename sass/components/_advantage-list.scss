@@ -2,11 +2,10 @@
 
 .advantage-list {
   padding: 0;
-  @extend %list;
+  @extend %list; 
+  text-align: center;
 }
-.advantage-list__item {
-  max-width: 270px;
-}
+
 .advantage-list__title {
   font-size: 14px;
   line-height: 1.1;
@@ -20,21 +19,20 @@
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
-
-  margin-top: 0;
-  max-width: 270px;
+  margin: 0;
+  text-align: start;
+}
+.advantage-list__item{
+  margin-bottom: 30px;
 }
 .advantage-list__icon {
   background-color: var(--team-background-color);
   color: currentColor;
-  width: 270px;
+  width: 450px;
   height: 120px;
   border-radius: 4px;
-  @include flex ($jc: center, $ai: center);
+  
   margin-bottom: 30px;
   padding: 0;
-}
-.advantage-list__svg {
-  @include flex ($jc: center);
-  text-align: center;
+  @include flex ($jc: center, $ai: center);
 }
