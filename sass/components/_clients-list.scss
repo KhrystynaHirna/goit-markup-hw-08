@@ -3,18 +3,30 @@
 
 .clients-list {
   list-style: none;
- 
-  padding: 0 0 94px;
+  padding: 0 0 60px;
   margin: 0;
-
+  @extend %d-flex;
+  flex-wrap: wrap;
 }
-.clients-list__link {
-  width: 170px;
+.clients-list__item {
+  width: 210px;
   height: 92px;
   @include border (1px, var(--icon-color));
   border-radius: 4px;
-  fill: var(--icon-color);
+  @include flex ($jc:center, $ai:center);
+ &:not(:nth-child(-n + 2)) {
+  margin-top: 30px;
+ }
+ &:not(:nth-child(2n)) {
+  margin-right: 30px;
+ }
+}
+
+.clients-list__link {
  
+  border-color: var(--icon-color);
+  fill: var(--icon-color);
+  
   @include transition (fill);
   @include transition (border-color);
 

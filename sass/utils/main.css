@@ -27,7 +27,7 @@
   margin: 0;
 }
 
-.header-info__link, .advantage-list__icon, .social-icons, .social-icons__link {
+.header-info__link, .advantage-list__icon, .social-icons, .social-icons__link, .clients-list, .clients-list__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -461,6 +461,9 @@ summary {
           box-shadow: var(--team-card-shadow);
   border-radius: 0px 0px 4px 4px;
   background-color: var(--body-background-color);
+}
+
+.team-list__card:not(:last-child) {
   margin-bottom: 30px;
 }
 
@@ -546,17 +549,37 @@ summary {
 
 .clients-list {
   list-style: none;
-  padding: 0 0 94px;
+  padding: 0 0 60px;
   margin: 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-.clients-list__link {
-  width: 170px;
+.clients-list__item {
+  width: 210px;
   height: 92px;
   border-width: 1px;
   border-color: var(--icon-color);
   border: 1px solid var(--icon-color);
   border-radius: 4px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.clients-list__item:not(:nth-child(-n + 2)) {
+  margin-top: 30px;
+}
+
+.clients-list__item:not(:nth-child(2n)) {
+  margin-right: 30px;
+}
+
+.clients-list__link {
+  border-color: var(--icon-color);
   fill: var(--icon-color);
   -webkit-transition: 250ms var(--timing-function);
   transition: 250ms var(--timing-function);
@@ -1048,7 +1071,7 @@ img {
 }
 
 .clients-section {
-  padding-top: 94px;
+  padding: 60px 0 0;
 }
 
 .portfolio-section {
