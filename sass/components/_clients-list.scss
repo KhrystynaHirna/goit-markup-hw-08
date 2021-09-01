@@ -9,11 +9,6 @@
   flex-wrap: wrap;
 }
 .clients-list__item {
-  width: 210px;
-  height: 92px;
-  @include border (1px, var(--icon-color));
-  border-radius: 4px;
-  @include flex ($jc:center, $ai:center);
  &:not(:nth-child(-n + 2)) {
   margin-top: 30px;
  }
@@ -21,12 +16,16 @@
   margin-right: 30px;
  }
 }
-
 .clients-list__link {
- 
+  width: 210px;
+  height: 92px; 
+  @include border (1px, var(--icon-color));
+  border-radius: 4px;
+  @include flex ($jc:center, $ai:center);
+  
+
   border-color: var(--icon-color);
   fill: var(--icon-color);
-  
   @include transition (fill);
   @include transition (border-color);
 
