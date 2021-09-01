@@ -17,12 +17,18 @@
   background-repeat: no-repeat;
   background-position: center;
  }
+//  MOBILE
  .main-section {
    @media screen and (min-width:480px) {
     background-size: 480px;
   }
  }
-
+//  TABLET
+ .main-section {
+   @media screen and (min-width:768px) {
+    background-size: 768px;
+  }
+ }
 // Advantage-section
 .advantage-section {
     padding-top: 60px; 
@@ -30,9 +36,13 @@
 .advantage-section__container {
   @extend .container; 
 }
-
+// MOBILE
 // Product-section
-
+.product-section {
+   @media screen and (max-width:767px) {
+  display: none;
+}
+}
 // Team-section
 .team-section {
   background-color: var(--team-background-color);
