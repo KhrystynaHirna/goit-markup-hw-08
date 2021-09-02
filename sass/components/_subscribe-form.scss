@@ -1,15 +1,29 @@
 
 // Footer subscribe-form
+// MOBILE
 .subscribe-form {
-
   & .primary-button {
   padding: 0;
   align-items: center;
   margin-left: 12px;
   }
 }
+.subscribe-form {
+   @media screen and (min-width: 768px) {
+     padding-left: 166px;
+     padding-right: 152px;
+     display: block;
+   }
+}
+// TABLET
+// .subscribe-form__input {
+//   @media screen and (min-width: 768px) {
+//   margin-left: auto;
+//   margin-right: auto;
+//   }
+// }
 .subscribe-form__input {
-  width: 100%;
+  width: 450px;
   height: 50px;
   border-radius: 4px;
 
