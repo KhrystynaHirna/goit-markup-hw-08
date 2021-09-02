@@ -1,29 +1,33 @@
 
 // Clients-section
-
+// MOBILE
 .clients-list {
+  @media screen and (min-width: 480px) {
   list-style: none;
   padding: 0 0 60px;
   margin: 0;
-  @extend %d-flex;
-  flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap; 
+   }
 }
 .clients-list__item {
- &:not(:nth-child(-n + 2)) {
+  @extend %list;
+  @media screen and (min-width: 480px) {
+  &:not(:nth-child(-n + 2)) {
   margin-top: 30px;
  }
- &:not(:nth-child(2n)) {
+  &:not(:nth-child(2n)) {
   margin-right: 30px;
  }
+}  
 }
 .clients-list__link {
+  @media screen and (min-width: 480px) {
   width: 210px;
   height: 92px; 
   @include border (1px, var(--icon-color));
   border-radius: 4px;
   @include flex ($jc:center, $ai:center);
-  
-
   border-color: var(--icon-color);
   fill: var(--icon-color);
   @include transition (fill);
@@ -33,4 +37,5 @@
   fill: var(--accent-color);
   border-color: var(--accent-color);
  }
+}
 }

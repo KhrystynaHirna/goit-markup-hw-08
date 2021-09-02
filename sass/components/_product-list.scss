@@ -4,8 +4,8 @@
   @media screen and (min-width:768px) {
   padding-left: 0;
   padding-right: 0;
-  }
- @extend %list; 
+  list-style: none;
+  } 
 }
 // TABLET
 .product-list__item {
@@ -38,5 +38,4 @@
   padding: 27px 82px;
   margin: 0; 
   }
- 
 }

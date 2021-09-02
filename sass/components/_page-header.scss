@@ -1,5 +1,5 @@
 // header-block
-
+// MOBILE
 .page-header {
   @include border ($use-bb:(var(--header-border-color)));
   padding-top: 16px;
@@ -7,9 +7,17 @@
 }
 .page-header__container {
   @extend .container;
-  padding-top: 16px;
-  padding-bottom: 16px;
-}  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} 
+// TABLET
+ .page-header {
+  @media screen and (min-width: 768px) {
+  @include border ($use-bb:(var(--header-border-color)));
+  padding: 0;
+  } 
+}
 
 // header-info block
 .header-info {
@@ -26,6 +34,10 @@
 
   padding: 0;
   margin-left: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+  list-style: none;
   } 
 }
 .header-info__item {
@@ -35,7 +47,7 @@
     color: var(--accent-color);  
   }
   &:not(:last-child) {
-    margin-right: 50px;
+    margin-bottom: 10px;
   }
   }
 }
@@ -44,16 +56,15 @@
   color: var(--paragraph-text-color);
   @include flex ($ai: center);
   @include transition (color);
-
+  text-decoration: none;
   &:hover, &:focus {
   color: var(--accent-color);  
   }
   }
-  @extend %link;
 }
 .header-info__icon {
   @media screen and (min-width: 768px) {
   fill: currentColor;
-  margin-right: 10px;
+  margin-right: 8px;
   }
 }
