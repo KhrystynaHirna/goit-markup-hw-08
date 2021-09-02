@@ -526,6 +526,10 @@ summary {
           align-items: center;
 }
 
+.advantage-list {
+  padding-bottom: 60px;
+}
+
 @media screen and (min-width: 768px) {
   .advantage-list {
     -ms-flex-wrap: wrap;
@@ -544,12 +548,21 @@ summary {
 }
 
 @media screen and (min-width: 768px) {
+  .advantage-list__title {
+    text-align: start;
+  }
+}
+
+@media screen and (min-width: 768px) {
   .advantage-list__text {
     width: 354px;
   }
 }
 
 @media screen and (min-width: 768px) {
+  .advantage-list__item {
+    margin-bottom: 0;
+  }
   .advantage-list__item:not(:nth-child(-n + 2)) {
     margin-top: 30px;
   }
@@ -562,6 +575,38 @@ summary {
   padding-left: 0;
 }
 
+@media screen and (min-width: 768px) {
+  .team-list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .team-list__card {
+    margin: 0;
+    width: 354px;
+    height: 536px;
+  }
+  .team-list__card:not(:nth-child(-n + 2)) {
+    margin-top: 30px;
+  }
+  .team-list__card:not(:nth-child(2n)) {
+    margin-right: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .team-list__image {
+    width: 354px;
+    height: 374px;
+  }
+}
+
 .team-list__card {
   text-align: center;
   -webkit-box-shadow: var(--team-card-shadow);
@@ -570,8 +615,10 @@ summary {
   background-color: var(--body-background-color);
 }
 
-.team-list__card:not(:last-child) {
-  margin-bottom: 30px;
+@media screen and (max-width: 767px) {
+  .team-list__card:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 
 .team-list__name {
@@ -1222,7 +1269,7 @@ img {
   padding-top: 60px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1200px) {
   .product-section {
     display: none;
   }
