@@ -21,40 +21,46 @@
   <header class="page-header">
     <div class="page-header__container">
       <a href="/index.html" class="logo">Web<span class="logo--black">Studio</span></a>
-
-      <button type="button" class="menu-button is-open" data-menu-button aria-expanded="false" aria-controls="menu-container">
-      <svg class="menu-button__svg" width="40" height="40" aria-label="Переключатель мобыльного меню">
-        <use href="./img/sprite.svg#icon-close_menu"></use>
-        <use href="./img/sprite.svg#icon-menu"></use>
+      <button type="button" class="menu-button is-open" aria-expanded="false" aria-controls="menu-container" data-menu-button>
+      <svg width="40" height="40" aria-label="Переключатель">
+        <use class="icon-burger" href="./img/sprite.svg#icon-burger"></use>
+        <use class="icon-cross" href="./img/sprite.svg#icon-cross"></use>
       </svg>
       </button>
-      <div class="menu-container" data-menu id="menu-container">
-         Контент меню
-      </div>
 
-      <nav class="navigation"> 
-        <ul class="navigation__list">
-          <li class="navigation__item"><a href="./index.html" class="navigation__link--current">Студия</a></li>
-          <li class="navigation__item"><a href="./portfolio.html" class="navigation__link">Портфолио</a></li>
-          <li class="navigation__item"><a href="" class="navigation__link">Контакты</a></li>
-        </ul>
-      </nav>
-      <ul class="header-info">
-        <li class="header-info__item">
-          <a href="mailto:info@devstudio.com" class="header-info__link">
-            <svg class="header-info__icon" width="16px" height="12px">
-              <use href="./img/sprite.svg#icon-mail"></use>
-            </svg><span>info@devstudio.com</span></a>
-        </li>
-
-        <li class="header-info">
-          <a href="tel:+380961111111" class="header-info__link">
-            <svg class="header-info__icon" width="10px" height="16px">
-              <use href="./img/sprite.svg#icon-phone"></use>
-            </svg><span>+38 096 111 11 11</span></a>
-        </li>
-      </ul>
+      <div class="menu-container is-hidden" id="menu-container" data-menu>
+        <div>
+          <ul class="mobile__list">
+            <li class="mobile__item"><a href="./index.html" class="mobile__link--current">Студия</a></li>
+            <li class="mobile__item"><a href="./portfolio.html" class="mobile__link">Портфолио</a></li>
+            <li class="mobale__item"><a href="" class="mobile__link">Контакты</a></li>
+          </ul>
+        </div>
+     
     </div>
+    <nav class="navigation">
+      <ul class="navigation__list">
+        <li class="navigation__item"><a href="./index.html" class="navigation__link--current">Студия</a></li>
+        <li class="navigation__item"><a href="./portfolio.html" class="navigation__link">Портфолио</a></li>
+        <li class="navigation__item"><a href="" class="navigation__link">Контакты</a></li>
+      </ul>
+    </nav>
+    <ul class="header-info">
+      <li class="header-info__item">
+        <a href="mailto:info@devstudio.com" class="header-info__link">
+          <svg class="header-info__icon" width="16px" height="12px">
+            <use href="./img/sprite.svg#icon-mail"></use>
+          </svg><span>info@devstudio.com</span></a>
+      </li>
+    
+      <li class="header-info">
+        <a href="tel:+380961111111" class="header-info__link">
+          <svg class="header-info__icon" width="10px" height="16px">
+            <use href="./img/sprite.svg#icon-phone"></use>
+          </svg><span>+38 096 111 11 11</span></a>
+      </li>
+    </ul>
+  </div>
   </header>
 
   <!--Унікальний контент сторінки  -->
@@ -520,10 +526,7 @@
   </div>
       </form>
   <script src="./js/modal.js"></script>
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
-    integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
-    crossorigin="anonymous"></script>
-  <script defer src="js/mobile-menu.js"></script>
+  <script src="./js/mobile-menu.js"></script>
 </body>
 
 </html>

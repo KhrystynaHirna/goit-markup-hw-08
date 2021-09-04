@@ -4,6 +4,7 @@
   @include border ($use-bb:(var(--header-border-color)));
   padding-top: 16px;
   padding-bottom: 16px;
+  position: relative;
 }
 .page-header__container {
   @extend .container;
@@ -68,7 +69,49 @@
   margin-right: 8px;
   }
 }
-// .container-menu {
-//   background-color: var(--body-background-color);
+.menu-container {
+  background-color: var(--body-background-color);
+  text-align: center;
+  padding: 20px;
+  font-size: 20px;
 
-// }
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: auto;
+
+     &.is-open {
+       display: block;
+     }
+   }
+.menu-button {
+  display: inline-flex;
+  margin-left: auto;
+  padding: 0;
+  background-color: transparent;
+}
+.menu-button {
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.menu-button .icon-cross {
+  display: none;
+}
+.menu-button .icon-burger {
+  display: block;
+}
+.menu-button.is-open .icon-cross {
+display: block;
+}
+.menu-button.is-open .icon-burger {
+display: none;
+}
+.menu-container.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: initial;
+}
+
