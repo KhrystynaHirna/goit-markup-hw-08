@@ -20,11 +20,41 @@
   <header class="page-header">
     <div class="page-header__container">
       <a href="/index.html" class="logo">Web<span class="logo--black">Studio</span></a>
-      <div>
-        <button></button>
-          <svg>
-            <use href="./img/sprite.svg#icon-modal-person"></use>
-          </svg>
+      <button type="button" class="menu-button is-open" aria-expanded="false" aria-controls="menu-container"
+        data-menu-button>
+        <svg width="40" height="40" aria-label="Переключатель">
+          <use class="icon-burger" href="./img/sprite.svg#icon-burger"></use>
+          <use class="icon-cross" href="./img/sprite.svg#icon-cross"></use>
+        </svg>
+      </button>
+  
+      <div class="menu-container is-hidden" id="menu-container" data-menu>
+        <div>
+          <ul class="mobile-navigation__list">
+            <li class="mobile-navigation__item"><a href="./index.html" class="mobile-navigation__link">Студия</a>
+            </li>
+            <li class="mobile-navigation__item"><a href="./portfolio.html" class="mobile-navigation__link--current">Портфолио</a>
+            </li>
+            <li class="mobale-navigation__item"><a href="" class="mobile-navigation__link">Контакты</a></li>
+          </ul>
+          <ul class="mobile-info__list">
+            <li class="mobile-info__item">
+              <a href="tel:+380961111111" class="mobile-info__link">
+                <span class="mobile-phone__link">+38 096 111 11 11</span></a>
+            </li>
+            <li class="mobile-info__item">
+              <a href="mailto:info@devstudio.com" class="mobile-info__link">
+                <span>info@devstudio.com</span></a>
+            </li>
+          </ul>
+          <ul class="mobile-social__list">
+            <li class="mobile-social__item"><a href="" class="mobile-social__link">Instagram</a></li>
+            <li class="mobile-social__item"><a href="" class="mobile-social__link">Twitter</a></li>
+            <li class="mobile-social__item"><a href="" class="mobile-social__link">Facebook</a></li>
+            <li class="mobile-social__item"><a href="" class="mobile-social__link">LinkedIn</a></li>
+          </ul>
+        </div>
+  
       </div>
       <nav class="navigation">
         <ul class="navigation__list">
@@ -68,7 +98,7 @@
           <li class="portfolio-items__card">
             <a href="" class="portfolio-items__link">
               <div class="portfolio-items__thumb">
-                <img src="./img/techno.jpg" alt="открытый ноутбук, на экране которого изображен сайт" width="370"
+                <img srcset="./img/techno-480px.jpg 1x, ./img/techno-768px.jpg 2x" src="./img/techno.jpg" alt="открытый ноутбук, на экране которого изображен сайт" width="370"
                   height="294">
                 <div class="overlay">
                   <p class="overlay__text">
@@ -87,7 +117,7 @@
           <li class="portfolio-items__card">
             <a href="" class="portfolio-items__link">
               <div class="portfolio-items__thumb">
-                <img src="./img/poster.jpg" alt="постер, на котором два человека в спортивной форме борются за баскетбольный мяч" width="370" height="294">
+                <img srcset="./img/poster-480px.jpg 1x, ./img/poster-768px.jpg 2x" src="./img/poster.jpg" alt="постер, на котором два человека в спортивной форме борются за баскетбольный мяч" width="370" height="294">
                 <div class="overlay">
                   <p class="overlay__text">
                     Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу
@@ -105,7 +135,7 @@
           <li class="portfolio-items__card">
             <a href="" class="portfolio-items__link">
               <div class="portfolio-items__thumb">
-                <img src="./img/restaurant.jpg" alt="логотип ресторана морской пищи в форме надписи на фоне рыбы"
+                <img srcset="./img/restaurant-480px.jpg 1x, ./img/restaurant-768px.jpg 2x" src="./img/restaurant.jpg" alt="логотип ресторана морской пищи в форме надписи на фоне рыбы"
                   width="370" height="294">
                 <div class="overlay">
                   <p class="overlay__text">
@@ -124,7 +154,7 @@
           <li class="portfolio-items__card">
             <a href="" class="portfolio-items__link">
               <div class="portfolio-items__thumb">
-                <img src="./img/headset.jpg" alt="большие черные наушники" width="370" height="294">
+                <img srcset="./img/headset-480px.jpg 1x, ./img/headset-768px.jpg 2x" src="./img/headset.jpg" alt="большие черные наушники" width="370" height="294">
                 <div class="overlay">
                   <p class="overlay__text">
                     Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу
@@ -142,7 +172,7 @@
           <li class="portfolio-items__card">
             <a href="" class="portfolio-items__link">
               <div class="portfolio-items__thumb">
-                <img src="./img/boxes.jpg" alt="две коробки, одна большая в белом цвете, вторая меньше коричневая"
+                <img srcset="./img/boxes-480px.jpg 1x, ./img/boxes-768px.jpg 2x" src="./img/boxes.jpg" alt="две коробки, одна большая в белом цвете, вторая меньше коричневая"
                   width="370" height="294">
                 <div class="overlay">
                   <p class="overlay__text">
@@ -161,7 +191,7 @@
           <li class="portfolio-items__card">
             <a href="" class="portfolio-items__link">
               <div class="portfolio-items__thumb">
-                <img src="./img/web-computer.jpg" alt="монитор компьютера, на котором запечатлен сайт на темном фоне"
+                <img srcset="./img/web-computer-480px.jpg 1x, ./img/web-computer-768px.jpg 2x" src="./img/web-computer.jpg" alt="монитор компьютера, на котором запечатлен сайт на темном фоне"
                   width="370" height="294">
                 <div class="overlay">
                   <p class="overlay__text">
@@ -180,7 +210,7 @@
           <li class="portfolio-items__card">
             <a href="" class="portfolio-items__link">
               <div class="portfolio-items__thumb">
-                <img src="./img/book.jpg" alt="книга, иллюстрированная картинками и текстом" width="370" height="294">
+                <img srcset="./img/book-480px.jpg 1x, ./img/book-768px.jpg 2x" src="./img/book.jpg" alt="книга, иллюстрированная картинками и текстом" width="370" height="294">
                 <div class="overlay">
                   <p class="overlay__text">
                     Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу
@@ -198,7 +228,7 @@
           <li class="portfolio-items__card">
             <a href="" class="portfolio-items__link">
               <div class="portfolio-items__thumb">
-                <img src="./img/label.jpg" alt="белый брелок с надписью" width="370" height="294">
+                <img srcset="./img/label-480px.jpg 1x, ./img/label-768px.jpg 2x" src="./img/label.jpg" alt="белый брелок с надписью" width="370" height="294">
                 <div class="overlay">
                   <p class="overlay__text">
                     Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу
@@ -216,7 +246,7 @@
           <li class="portfolio-items__card">
             <a href="" class="portfolio-items__link">
               <div class="portfolio-items__thumb">
-                <img src="./img/laptop.jpg" alt="открытый ноутбук, на котором человеческие руки печатают" width="370"
+                <img srcset="./img/laptop-480px.jpg 1x, ./img/laptop-768px.jpg 2x" src="./img/laptop.jpg" alt="открытый ноутбук, на котором человеческие руки печатают" width="370"
                   height="294">
                 <div class="overlay">
                   <p class="overlay__text">
@@ -308,7 +338,7 @@
     </div>
 
   </footer>
-
+<script src="./js/mobile-menu.js"></script>
 </body>
 
 </html>
