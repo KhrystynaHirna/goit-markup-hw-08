@@ -51,14 +51,14 @@
 
 // TABLET
 .advantage-list {
-  @media screen and (min-width: 768px) {
+  @media screen and (max-width: 1199px) {
   flex-wrap: wrap;
   display: flex;
   }
   padding-bottom: 60px;
 }
 .advantage-list__icon {
-  @media screen and (min-width: 768px) {
+  @media screen and (max-width: 1199px) {
   width: 354px;
   height: 120px;
   }
