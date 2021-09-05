@@ -1244,25 +1244,9 @@ summary {
   margin-bottom: 30px;
 }
 
-@media screen and (min-width: 1200px) {
-  .portfolio-items__card:not(:nth-child(-n + 3)) {
-    margin-top: 30px;
-  }
-  .portfolio-items__card:not(:nth-child(3n)) {
-    margin-right: 30px;
-  }
-}
-
-.portfolio-items__card {
-  width: 354px;
-}
-
 @media screen and (min-width: 768px) {
-  .portfolio-items__card:not(:nth-child(-n + 2)) {
-    margin-top: 30px;
-  }
-  .portfolio-items__card:not(:nth-child(2n)) {
-    margin-right: 30px;
+  .portfolio-items__card {
+    width: 354px;
   }
 }
 
@@ -1380,7 +1364,8 @@ summary {
 
 @media screen and (min-width: 768px) {
   .overlay__text {
-    width: 100%;
+    width: 354px;
+    height: 294px;
     padding: 49px 24px;
     -webkit-box-align: center;
         -ms-flex-align: center;
