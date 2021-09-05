@@ -1236,9 +1236,8 @@ summary {
 
 .portfolio-items {
   list-style: none;
-  padding: 60px, 0, 0, 0;
   padding-left: 0;
-  margin-top: 0;
+  margin-top: 30px;
 }
 
 .portfolio-items__card:not(:last-child) {
@@ -1256,7 +1255,6 @@ summary {
 
 .portfolio-items__card {
   width: 354px;
-  height: 440px;
 }
 
 @media screen and (min-width: 768px) {
@@ -1273,6 +1271,12 @@ summary {
   border-top: none;
   border: false solid false;
   max-width: 450px;
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio-items__description {
+    max-width: 354px;
+  }
 }
 
 .portfolio-items__name {
@@ -1333,7 +1337,6 @@ summary {
 
 .overlay {
   position: absolute;
-  width: 450px;
   height: 100%;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(33, 150, 243, 0.9)), to(rgba(33, 150, 243, 0.9)));
   background-image: linear-gradient(to right, rgba(33, 150, 243, 0.9), rgba(33, 150, 243, 0.9));
@@ -1346,14 +1349,19 @@ summary {
   transition-property: transform, -webkit-transform;
 }
 
+@media screen and (max-width: 767px) {
+  .overlay {
+    width: 450px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .overlay {
-    width: 354px;
+    max-width: 354px;
   }
 }
 
 .overlay__text {
-  padding: 63px 24px;
   margin: 0;
   font-style: normal;
   font-weight: normal;
@@ -1361,6 +1369,23 @@ summary {
   line-height: 1.55;
   letter-spacing: 0.03em;
   color: var(--body-background-color);
+}
+
+@media screen and (max-width: 767px) {
+  .overlay__text {
+    width: 450px;
+    padding: 63px 24px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .overlay__text {
+    width: 100%;
+    padding: 49px 24px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 body {
