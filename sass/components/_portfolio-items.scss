@@ -1,16 +1,21 @@
 
-// Portfolio
-
 .portfolio-filter {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 480px;
-  padding: 0 0 40px;
-
-  @extend %list;
+   @extend %list;
+   @media screen and (max-width: 767px) {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 480px;
+    padding: 0 0 40px;
+}
+}
+.portfolio-filter {
+  @media screen and (min-width:768px) {
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+  }
 }
 .portfolio-filter__item {
-
  &:not(:last-child) {
    margin-right: 8px;
  }
@@ -21,11 +26,12 @@
 // Portfolio-cards
 
 .portfolio-items {
-  
-  padding-right: 0;
+  list-style: none;
+  padding: 60px, 0, 0, 0;
   padding-left: 0;
-  @extend %list;
+  margin-top: 0;
 }
+
 .portfolio-items__card:not(:last-child) {
   margin-bottom: 30px;
 }
@@ -36,6 +42,18 @@
   margin-top: 30px;
   }
   &:not(:nth-child(3n)) {
+  margin-right: 30px;
+  }
+}
+}
+.portfolio-items__card {
+  width: 354px;
+  height: 440px;
+  @media screen and (min-width:768px) {
+  &:not(:nth-child(-n + 2)) {
+  margin-top: 30px;
+  }
+  &:not(:nth-child(2n)) {
   margin-right: 30px;
   }
 }
@@ -88,7 +106,7 @@
 }
 .overlay {
   position: absolute;
-  width: 100%;
+  width: 450px;
   height: 100%;
   background-image: linear-gradient(
     to right,
@@ -97,6 +115,11 @@
   );
   opacity: 0;
   @include transition (transform);
+}
+.overlay {
+  @media screen and (min-width:768px) {
+    width: 354px;
+  }
 }
 .overlay__text {
   padding: 63px 24px;

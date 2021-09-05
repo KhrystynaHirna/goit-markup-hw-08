@@ -22,7 +22,7 @@
   text-decoration: none;
 }
 
-.advantage-list, .team-list, .clients-list__item, .address__list, .portfolio-filter, .portfolio-items {
+.advantage-list, .team-list, .clients-list__item, .address__list, .portfolio-filter {
   list-style: none;
   margin: 0;
 }
@@ -387,6 +387,7 @@ summary {
   margin-left: auto;
   padding: 0;
   background-color: transparent;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {
@@ -1201,14 +1202,28 @@ summary {
   text-align: center;
 }
 
-.portfolio-filter {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  max-width: 480px;
-  padding: 0 0 40px;
+@media screen and (max-width: 767px) {
+  .portfolio-filter {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    max-width: 480px;
+    padding: 0 0 40px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio-filter {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-left: 0;
+  }
 }
 
 .portfolio-filter__item:not(:last-child) {
@@ -1220,8 +1235,10 @@ summary {
 }
 
 .portfolio-items {
-  padding-right: 0;
+  list-style: none;
+  padding: 60px, 0, 0, 0;
   padding-left: 0;
+  margin-top: 0;
 }
 
 .portfolio-items__card:not(:last-child) {
@@ -1233,6 +1250,20 @@ summary {
     margin-top: 30px;
   }
   .portfolio-items__card:not(:nth-child(3n)) {
+    margin-right: 30px;
+  }
+}
+
+.portfolio-items__card {
+  width: 354px;
+  height: 440px;
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio-items__card:not(:nth-child(-n + 2)) {
+    margin-top: 30px;
+  }
+  .portfolio-items__card:not(:nth-child(2n)) {
     margin-right: 30px;
   }
 }
@@ -1302,7 +1333,7 @@ summary {
 
 .overlay {
   position: absolute;
-  width: 100%;
+  width: 450px;
   height: 100%;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(33, 150, 243, 0.9)), to(rgba(33, 150, 243, 0.9)));
   background-image: linear-gradient(to right, rgba(33, 150, 243, 0.9), rgba(33, 150, 243, 0.9));
@@ -1313,6 +1344,12 @@ summary {
   transition-property: -webkit-transform;
   transition-property: transform;
   transition-property: transform, -webkit-transform;
+}
+
+@media screen and (min-width: 768px) {
+  .overlay {
+    width: 354px;
+  }
 }
 
 .overlay__text {
@@ -1431,10 +1468,10 @@ img {
 }
 
 .portfolio-section {
-  padding: 60px 0;
+  padding: 60px 0 0 0;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .portfolio-section {
     padding: 94px 0;
   }
