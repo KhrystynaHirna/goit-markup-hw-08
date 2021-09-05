@@ -88,15 +88,14 @@
 // DESKTOP
 .advantage-list {
   @media screen and (min-width: 1200px) {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
+  padding: 0;
+  @include flex ($jc: space-between);
+  @extend %list; 
   }
 }
 .advantage-list__item {
   @media screen and (min-width: 1200px) {
-   max-width: 270px; 
+  max-width: 270px;
   }
 }
 .advantage-list__title {
@@ -114,8 +113,9 @@
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
+
   margin-top: 0;
-  max-width: 270px; 
+  max-width: 270px;
   }
 }
 .advantage-list__icon {
@@ -125,15 +125,16 @@
   width: 270px;
   height: 120px;
   border-radius: 4px;
-  justify-content: center;
-  align-items: center;
+  @include flex ($jc: center, $ai: center);
   margin-bottom: 30px;
   padding: 0;
   }
 }
 .advantage-list__svg {
   @media screen and (min-width: 1200px) {
-  justify-content: center;
+  @include flex ($jc: center);
   text-align: center;
-  }
+  } 
 }
+
+
