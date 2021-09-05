@@ -1202,12 +1202,21 @@ summary {
 }
 
 .portfolio-filter {
-  margin-bottom: 50px;
-  padding: 0 0 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 480px;
+  padding: 0 0 40px;
 }
 
 .portfolio-filter__item:not(:last-child) {
   margin-right: 8px;
+}
+
+.portfolio-filter__item {
+  margin-bottom: 15px;
 }
 
 .portfolio-items {
@@ -1215,19 +1224,24 @@ summary {
   padding-left: 0;
 }
 
-.portfolio-items__card:not(:nth-child(-n + 3)) {
-  margin-top: 30px;
+.portfolio-items__card:not(:last-child) {
+  margin-bottom: 30px;
 }
 
-.portfolio-items__card:not(:nth-child(3n)) {
-  margin-right: 30px;
+@media screen and (min-width: 1200px) {
+  .portfolio-items__card:not(:nth-child(-n + 3)) {
+    margin-top: 30px;
+  }
+  .portfolio-items__card:not(:nth-child(3n)) {
+    margin-right: 30px;
+  }
 }
 
 .portfolio-items__description {
   border: var(--card-border-color);
   border-top: none;
   border: false solid false;
-  max-width: 370px;
+  max-width: 450px;
 }
 
 .portfolio-items__name {
@@ -1417,7 +1431,13 @@ img {
 }
 
 .portfolio-section {
-  padding: 94px 0;
+  padding: 60px 0;
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio-section {
+    padding: 94px 0;
+  }
 }
 
 .primary-button {

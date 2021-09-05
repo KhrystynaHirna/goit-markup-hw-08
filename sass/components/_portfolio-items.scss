@@ -2,9 +2,10 @@
 // Portfolio
 
 .portfolio-filter {
-  
-  margin-bottom: 50px;
-  padding: 0 0 50px;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 480px;
+  padding: 0 0 40px;
 
   @extend %list;
 }
@@ -14,6 +15,9 @@
    margin-right: 8px;
  }
 }
+.portfolio-filter__item {
+   margin-bottom: 15px;
+}
 // Portfolio-cards
 
 .portfolio-items {
@@ -22,8 +26,12 @@
   padding-left: 0;
   @extend %list;
 }
-.portfolio-items__card {
+.portfolio-items__card:not(:last-child) {
+  margin-bottom: 30px;
+}
 
+.portfolio-items__card {
+  @media screen and (min-width:1200px) {
   &:not(:nth-child(-n + 3)) {
   margin-top: 30px;
   }
@@ -31,10 +39,11 @@
   margin-right: 30px;
   }
 }
+}
 .portfolio-items__description {
   border: var(--card-border-color);
   @include border ($use-bt: none);
-  max-width: 370px;
+  max-width: 450px;
 }
 .portfolio-items__name {
   font-size: 18px;
