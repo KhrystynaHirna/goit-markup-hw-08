@@ -9,7 +9,6 @@
 .page-header__container {
   @extend .container;
   display: flex;
-  
   align-items: center;
 } 
 // TABLET
@@ -19,7 +18,6 @@
   padding: 0;
   } 
 }
-
 // header-info block
 .header-info {
   @media screen and (max-width: 767px) {
@@ -40,11 +38,6 @@
   text-decoration: none;
   list-style: none;
   } 
-}
-.header-info__item {
-   @media screen and (min-width: 1200px) {
-     display: flex;
-   }
 }
 .header-info__item {
   @media screen and (min-width: 768px) {
@@ -77,44 +70,19 @@
 // DESKTOP
 .header-info {
   @media screen and (min-width: 1200px) {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.1;
-  letter-spacing: 0.02em;
-
-  padding: 0;
-  margin-left: auto;
   @include flex ($ai: center);
 }
 }
 .header-info__item {
   @media screen and (min-width: 1200px) {
-  color: var(--paragraph-text-color);
   @include flex ($ai: center);
-
-  &:hover, &:focus {
-    color: var(--accent-color);  
-  }
   &:not(:last-child) {
     margin-right: 50px;
   }
   }
 }
-.header-info__link {
-  @extend %link;
-  @media screen and (min-width: 1200px) {
-  color: var(--paragraph-text-color);
-  @include flex ($ai: center);
-  @include transition (color);
-
-  &:hover, &:focus {
-  color: var(--accent-color);  
-  }
-  }
-}
 .header-info__icon {
   @media screen and (min-width: 1200px) {
-  fill: currentColor;
   margin-right: 10px;
   }
 }
