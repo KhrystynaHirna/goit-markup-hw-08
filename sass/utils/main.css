@@ -1137,6 +1137,9 @@ summary {
 @media screen and (min-width: 1200px) {
   .footer__item--first {
     margin-right: 70px;
+    margin-left: auto;
+    width: 231px;
+    text-align: start;
   }
 }
 
@@ -1634,25 +1637,25 @@ body {
   font-family: 'Roboto', 'Arial', sans-serif;
 }
 
-.container, .page-header__container, .footer__container, .advantage-section__container, .team-section__container, .clients-section__container, .portfolio-section__container {
+.container, .page-header__container, .footer__container, .advantage-section__container, .product-section__container, .team-section__container, .clients-section__container, .portfolio-section__container {
   padding: 0 15px;
   margin: 0 auto;
 }
 
 @media screen and (min-width: 480px) {
-  .container, .page-header__container, .footer__container, .advantage-section__container, .team-section__container, .clients-section__container, .portfolio-section__container {
+  .container, .page-header__container, .footer__container, .advantage-section__container, .product-section__container, .team-section__container, .clients-section__container, .portfolio-section__container {
     min-width: 480px;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .container, .page-header__container, .footer__container, .advantage-section__container, .team-section__container, .clients-section__container, .portfolio-section__container {
+  .container, .page-header__container, .footer__container, .advantage-section__container, .product-section__container, .team-section__container, .clients-section__container, .portfolio-section__container {
     min-width: 768px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .container, .page-header__container, .footer__container, .advantage-section__container, .team-section__container, .clients-section__container, .portfolio-section__container {
+  .container, .page-header__container, .footer__container, .advantage-section__container, .product-section__container, .team-section__container, .clients-section__container, .portfolio-section__container {
     min-width: 1200px;
   }
 }
@@ -1695,8 +1698,8 @@ img {
   margin-top: 0;
   padding: 118px 0 198px;
   text-align: center;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), image(srcset= "./img/hero-480px.jpg 1x, ./img/hero-768px.jpg 2x") url(../img/hero-480px.jpg);
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), image(srcset= "./img/hero-480px.jpg 1x, ./img/hero-768px.jpg 2x") url(../img/hero-480px.jpg);
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), image(srcset= "./img/hero-480px.jpg 1x, ./img/hero-768px.jpg 2x"), url(../img/hero-480px.jpg);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), image(srcset= "./img/hero-480px.jpg 1x, ./img/hero-768px.jpg 2x"), url(../img/hero-480px.jpg);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -1713,6 +1716,12 @@ img {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .main-section {
+    background-size: 1200px;
+  }
+}
+
 .advantage-section {
   padding-top: 60px;
 }
@@ -1725,7 +1734,7 @@ img {
 
 @media screen and (min-width: 1200px) {
   .product-section {
-    display: block;
+    padding: 47px 0 94px 0;
   }
 }
 

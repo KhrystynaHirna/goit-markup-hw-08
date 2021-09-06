@@ -83,14 +83,17 @@
 // DESKTOP
 
 .footer__container {
-  @extend .container;
   @media screen and (min-width: 1200px) {
   @include flex ($ai: baseline);
  }
+ @extend .container;
 }
 .footer__item--first {
   @media screen and (min-width: 1200px) {
   margin-right: 70px;
+  margin-left: auto;
+  width: 231px;
+  text-align: start;
   }
 }
 .address__item:not(:last-child) {
