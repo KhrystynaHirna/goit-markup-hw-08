@@ -1508,7 +1508,7 @@ summary {
         flex-basis: 20px;
     margin-bottom: 30px;
     max-width: 354px;
-    height: 100%;
+    height: 404px;
   }
 }
 
@@ -1604,11 +1604,15 @@ summary {
   transition-property: transform, -webkit-transform;
 }
 
+@media screen and (min-width: 768px) {
+  .overlay {
+    max-width: 354px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .overlay {
     max-width: 370px;
-    height: 100%;
-    margin: 0;
   }
 }
 

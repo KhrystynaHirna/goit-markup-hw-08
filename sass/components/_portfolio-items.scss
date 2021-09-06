@@ -27,17 +27,6 @@
   padding-left: 0;
   margin-bottom: 60px;
 }
-//  .portfolio-items{
-//   @media screen and (min-width:768px) {
-//   &:not(:nth-child(-n + 2)) {
-//   margin-top: 30px;
-//   }
-//   &:not(:nth-child(2n)) {
-//   margin-right: 30px;
-//   }
-//   // max-width: 354px;
-// }
-// }
 
 // DESKTOP
 .portfolio-filter {
@@ -53,7 +42,6 @@
    margin-right: 8px;
  }
 }
-// Portfolio-cards
 
 .portfolio-list {
   @media screen and (min-width:768px) {
@@ -72,6 +60,19 @@
     margin-bottom: 30px;
   }
 }
+// TABLET
+// .portfolio-item {
+//   @media screen and (min-width:768px) {
+//   max-width: 354px;
+//   &:not(:nth-child(-n + 2)) {
+//   margin-top: 30px;
+//   }
+//   &:not(:nth-child(2n)) {
+//   margin-right: 30px;
+//   }
+// }
+// }
+
 // DESKTOP
 .portfolio__item {
   @media screen and (min-width:1200px) {
@@ -84,24 +85,12 @@
 }
 }
 // TABLET
-// .portfolio-items__card {
-//   @media screen and (min-width:768px) {
-//   &:not(:nth-child(-n + 2)) {
-//   margin-top: 30px;
-//   }
-//   &:not(:nth-child(2n)) {
-//   margin-right: 30px;
-//   }
-//   max-width: 354px;
-// }
-// }
-
 .portfolio__item {
 @media screen and (min-width:768px) {
   flex-basis: ((100 - 60px) / 2);
   margin-bottom: 30px;
   max-width: 354px;
-  height: 100%;
+  height: 404px;
 }
 }
 .portfolio__item-description {
@@ -174,18 +163,14 @@
   opacity: 0;
   @include transition (transform);
 }
-// .overlay {
-//   @media screen and (min-width:768px) {
-//     max-width: 354px;
-//     height: 100%;
-//     margin: 0;
-//   }
-// }
+.overlay {
+  @media screen and (min-width:768px) {
+    max-width: 354px;
+  }
+}
 .overlay {
   @media screen and (min-width:1200px) {
     max-width: 370px;
-    height: 100%;
-    margin: 0;
   }
 }
 .overlay__text {
