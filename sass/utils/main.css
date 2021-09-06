@@ -1452,6 +1452,11 @@ summary {
   }
 }
 
+.portfolio-items {
+  list-style: none;
+  padding-left: 0;
+}
+
 @media screen and (min-width: 1200px) {
   .portfolio-filter {
     display: -webkit-box;
@@ -1471,7 +1476,6 @@ summary {
 
 @media screen and (min-width: 768px) {
   .portfolio-items {
-    list-style: none;
     padding-left: 0;
     margin-top: 30px;
   }
