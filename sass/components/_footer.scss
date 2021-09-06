@@ -80,3 +80,28 @@
     padding-top: 60px;
   }
 }
+// DESKTOP
+
+.footer__container {
+  @extend .container;
+  @media screen and (min-width: 1200px) {
+  @include flex ($ai: baseline);
+ }
+}
+.footer__item--first {
+  @media screen and (min-width: 1200px) {
+  margin-right: 70px;
+  }
+}
+.address__item:not(:last-child) {
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 9px;
+  }
+}
+.footer__item--third {
+  @media screen and (min-width: 1200px) {
+  padding-left: 0;
+  margin-left: auto; 
+  }
+  
+}

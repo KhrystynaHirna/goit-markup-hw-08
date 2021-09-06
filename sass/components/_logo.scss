@@ -27,3 +27,15 @@
 .logo > .logo--white {
   margin-bottom: 20px;
 }
+// DESKTOP
+.logo {
+@media screen and (min-width: 1200px) {
+  font-size: 26px;
+  line-height: 1.19;
+   &--white {
+  color: var(--body-background-color);
+  display: inline-block;
+  margin-bottom: 20px;
+ }
+}
+}

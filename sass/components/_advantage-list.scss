@@ -87,10 +87,10 @@
 }
 // DESKTOP
 .advantage-list {
+  @extend %list; 
   @media screen and (min-width: 1200px) {
   padding: 0;
   @include flex ($jc: space-between);
-  @extend %list; 
   }
 }
 .advantage-list__item {
