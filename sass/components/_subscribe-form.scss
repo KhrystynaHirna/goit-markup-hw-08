@@ -10,10 +10,12 @@
   }
 }
 .subscribe-form {
-   @media screen and (min-width: 768px) {
-     padding-left: 166px;
-     padding-right: 152px;
-     display: block;
+   @media screen and (max-width: 1199px) {
+    //  padding-left: 166px;
+    //  padding-right: 152px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
    }
 }
 .subscribe-form {
