@@ -786,6 +786,8 @@ summary {
 
 @media screen and (min-width: 768px) {
   .team-list__card {
+    width: 354px;
+    height: 536px;
     margin: 15px;
   }
 }
@@ -1492,12 +1494,6 @@ summary {
   }
 }
 
-.portfolio-list {
-  list-style: none;
-  padding-left: 0;
-  margin-bottom: 60px;
-}
-
 @media screen and (min-width: 1200px) {
   .portfolio-filter {
     display: -webkit-box;
@@ -1515,16 +1511,20 @@ summary {
   margin-right: 8px;
 }
 
-@media screen and (min-width: 768px) {
-  .portfolio-list {
-    padding-left: 0;
-    margin-top: 30px;
-  }
+.portfolio-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .portfolio-list {
-    margin-top: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: -15px;
   }
 }
 
@@ -1534,21 +1534,16 @@ summary {
   }
 }
 
-@media screen and (min-width: 1200px) {
-  .portfolio__item:not(:nth-child(-n + 3)) {
-    margin-top: 30px;
-  }
-  .portfolio__item:not(:nth-child(3n)) {
-    margin-right: 30px;
+@media screen and (max-width: 767px) {
+  .portfolio__item {
+    margin: 0;
   }
 }
 
 @media screen and (min-width: 768px) {
   .portfolio__item {
-    -ms-flex-preferred-size: 20px;
-        flex-basis: 20px;
-    margin-bottom: 30px;
-    max-width: 354px;
+    margin: 15px;
+    width: 354px;
     height: 404px;
   }
 }
@@ -1558,19 +1553,6 @@ summary {
     border: var(--card-border-color);
     border-top: none;
     border: false solid false;
-    max-width: 450px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .portfolio__item-description {
-    max-width: 354px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .portfolio__item-description {
-    max-width: 370px;
   }
 }
 
@@ -1623,6 +1605,13 @@ summary {
   opacity: 1;
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio__item-link {
+    width: 354px;
+    height: 404px;
+  }
 }
 
 .portfolio__item-thumb {

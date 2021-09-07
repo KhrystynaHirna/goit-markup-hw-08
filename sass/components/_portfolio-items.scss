@@ -22,12 +22,6 @@
     padding-left: 0;
   }
 }
-.portfolio-list {
-  list-style: none;
-  padding-left: 0;
-  margin-bottom: 60px;
-}
-
 // DESKTOP
 .portfolio-filter {
   @media screen and (min-width:1200px) {
@@ -44,15 +38,14 @@
 }
 
 .portfolio-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
   @media screen and (min-width:768px) {
-  padding-left: 0;
-  margin-top: 30px;
-  } 
-}
-.portfolio-list {
-  @media screen and (min-width:1200px) {
-    margin-top: 50px;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+   }
 }
 // MOBILE
 .portfolio__item:not(:last-child) {
@@ -74,42 +67,54 @@
 // }
 
 // DESKTOP
-.portfolio__item {
-  @media screen and (min-width:1200px) {
-  &:not(:nth-child(-n + 3)) {
-  margin-top: 30px;
-  }
-  &:not(:nth-child(3n)) {
-  margin-right: 30px;
-  }
-}
-}
+// .portfolio__item {
+//   @media screen and (min-width:1200px) {
+//   &:not(:nth-child(-n + 3)) {
+//   margin-top: 30px;
+//   }
+//   &:not(:nth-child(3n)) {
+//   margin-right: 30px;
+//   }
+// }
+// }
 // TABLET
+// .portfolio__item {
+// @media screen and (min-width:768px) {
+//   flex-basis: ((100 - 60px) / 2);
+//   margin-bottom: 30px;
+//   max-width: 354px;
+//   height: 404px;
+// }
+// }
 .portfolio__item {
-@media screen and (min-width:768px) {
-  flex-basis: ((100 - 60px) / 2);
-  margin-bottom: 30px;
-  max-width: 354px;
-  height: 404px;
+  @media screen and (max-width:767px) {
+    margin: 0;
+  }
 }
+.portfolio__item {
+  @media screen and (min-width:768px) {
+    margin: 15px;
+    width: 354px;
+    height: 404px;
+  }
 }
 .portfolio__item-description {
   @media screen and (min-width:480px) {
   border: var(--card-border-color);
   @include border ($use-bt: none);
-  max-width: 450px;
+  // max-width: 450px;
   }
 }
-.portfolio__item-description {
-   @media screen and (min-width:768px) {
-   max-width: 354px;
-   }
-}
-.portfolio__item-description {
-   @media screen and (min-width:1200px) {
-   max-width: 370px;
-   }
-}
+// .portfolio__item-description {
+//    @media screen and (min-width:768px) {
+//    max-width: 354px;
+//    }
+// }
+// .portfolio__item-description {
+//    @media screen and (min-width:1200px) {
+//    max-width: 370px;
+//    }
+// }
 // general
 .portfolio__item-name {
   font-size: 18px;
@@ -147,6 +152,12 @@
       transform: translateY(-100%);
     }
   }  
+  .portfolio__item-link {
+    @media screen and (min-width:768px) {
+      width: 354px;
+      height: 404px;
+    }
+  }
 .portfolio__item-thumb {
   position: relative;
   overflow: hidden;
