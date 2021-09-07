@@ -21,7 +21,6 @@
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
-  // padding-top: 20px;
   padding-left: 0;
 
   @extend %list;
@@ -61,13 +60,6 @@
     text-align: center;
    }
 }
-// TABLET
-// .footer__item--first {
-//   @media screen and (min-width: 768px) {
-//     margin-right: 165px;
-//     margin-left: 76px;
-//   }
-// }
 .footer__item--first {
    @media screen and (max-width: 767px){
      text-align: center;
@@ -134,8 +126,6 @@
 }
 .footer__item--third {
   @media screen and (min-width: 1200px) {
-  // padding-left: 0;
-  // margin-left: auto; 
   }
   
 }

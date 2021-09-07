@@ -1,64 +1,12 @@
 
-// // .navigation {
-// //   @media screen and (min-width: 480px) {
-// //   display: flex;
-// // }
-// // }
-
-
-// .navigation__list {
-// //   @media screen and (min-width: 480px) {
-//   font-weight: 500;
-//   font-size: 40px;
-//   line-height: 1.175;
-//   letter-spacing: 0.02em;
-//   list-style: none;
-//   padding-left: 0;
-//   margin: 0;
-//   } 
-
-// // .navigation__item:not(:last-child) {
-// //  @media screen and (min-width: 768px) {
-// //    margin-right: 50px;
-// //  } 
-// // }
-// .navigation__link {
-//   text-decoration: none;
-// //   @media screen and (min-width: 480px) {
-//   padding: 32px 0;
-//   color: var(--primary-text-color);
-//   display: block;
-//   @include transition (color);
-//   &:hover, &:focus {
-//   color: var(--accent-color);  
-//    }
-//   }  
-
-// .navigation__link--current {
-// //   @media screen and (min-width: 480px) {
-//   color: var(--accent-color);
-//   padding: 32px 0; 
-//   position: relative;
-//   text-decoration: none;
-  
-//   &::after {
-//   content: '';
-//   display: block;
-//   width: 100%;
-//   height: 4px;
-//   background: var(--accent-color);
-//   border-radius: 2px;
-//   position: absolute;
-//   bottom: -1px; 
-//    }
-//   }
 .menu-container {
   background-color: var(--body-background-color);
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: auto;
+  height: 100vh;
+  z-index: 998;
 
   &.is-open {
   display: block;
@@ -70,6 +18,7 @@
   padding: 0;
   background-color: transparent;
   cursor: pointer;
+  z-index: 999;
 }
 .menu-button {
   @media screen and (min-width: 768px) {
@@ -93,7 +42,11 @@ display: none;
   visibility: visible;
   pointer-events: initial;
 }
-
+ .mobile__list{
+   display: flex;
+   flex-direction: column;
+   align-content: space-between;
+ }
  .mobile-navigation__list {
   list-style: none;
   } 
@@ -130,7 +83,7 @@ display: none;
     padding-top: 302px;
     padding-left: 40px;
     padding-bottom: 64px;
-    margin-top: 0;
+    margin: 0;
 }
 .mobile-info__link {
     text-decoration: none;
@@ -154,6 +107,7 @@ display: none;
     list-style: none;
     display: flex;
     padding-bottom: 48px;
+    margin: 0;
 }
 .mobile-social__link {
     text-decoration: none;
@@ -168,3 +122,6 @@ display: none;
   border-right: 1px solid rgba(33, 33, 33, 0.2);
   margin-right: 10px;
 }
+// .mobile__list > .mobile__item-second {
+//   align-content: flex-end;
+// }

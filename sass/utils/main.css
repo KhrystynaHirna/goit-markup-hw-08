@@ -733,9 +733,8 @@ summary {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-line-pack: justify;
+        align-content: space-between;
   }
 }
 
@@ -1313,6 +1312,7 @@ summary {
 }
 
 .modal {
+  width: 450px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1346,6 +1346,12 @@ summary {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+  }
 }
 
 .modal__title {
@@ -1541,7 +1547,8 @@ summary {
 }
 
 .portfolio-list {
-  padding: 0;
+  padding-right: 0;
+  padding-left: 0;
   margin: 0;
   list-style: none;
 }
@@ -1558,7 +1565,7 @@ summary {
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1199px) {
   .portfolio-list {
     padding-bottom: 60px;
   }
@@ -1580,15 +1587,34 @@ summary {
   .portfolio__item {
     margin: 15px;
     width: 354px;
-    height: 404px;
+    height: auto;
   }
 }
 
-@media screen and (min-width: 480px) {
+.portfolio__item-description {
+  border: var(--card-border-color);
+  border-top: none;
+  border: false solid false;
+}
+
+@media screen and (max-width: 767px) {
   .portfolio__item-description {
-    border: var(--card-border-color);
-    border-top: none;
-    border: false solid false;
+    max-width: 450px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio__item-description {
+    max-width: 354px;
+  }
+  .portfolio__item-description:first-child {
+    height: 146px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio__item-description {
+    max-width: 370px;
   }
 }
 
@@ -1643,15 +1669,7 @@ summary {
           transform: translateY(-100%);
 }
 
-@media screen and (min-width: 768px) {
-  .portfolio__item-link {
-    width: 354px;
-    height: 404px;
-  }
-}
-
 .portfolio__item-thumb {
-  display: block;
   position: relative;
   overflow: hidden;
 }
@@ -1667,6 +1685,7 @@ summary {
   position: absolute;
   margin: 0;
   height: 100%;
+  width: 100%;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(33, 150, 243, 0.9)), to(rgba(33, 150, 243, 0.9)));
   background-image: linear-gradient(to right, rgba(33, 150, 243, 0.9), rgba(33, 150, 243, 0.9));
   opacity: 0;
@@ -1690,21 +1709,26 @@ summary {
   }
 }
 
-@media screen and (min-width: 480px) {
+.overlay__text {
+  margin: 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.55;
+  letter-spacing: 0.03em;
+  color: var(--body-background-color);
+  height: 100%;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+@media screen and (max-width: 767px) {
   .overlay__text {
     padding: 77px 24px;
-    margin: 0;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 1.55;
-    letter-spacing: 0.03em;
-    color: var(--body-background-color);
-    height: 100%;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 1199px) {
   .overlay__text {
     padding: 49px 24px;
     height: 100%;
@@ -1926,7 +1950,8 @@ img {
   top: 0;
   left: 0;
   width: 100%;
-  height: auto;
+  height: 100vh;
+  z-index: 998;
 }
 
 .menu-container.is-open {
@@ -1941,6 +1966,7 @@ img {
   padding: 0;
   background-color: transparent;
   cursor: pointer;
+  z-index: 999;
 }
 
 @media screen and (min-width: 768px) {
@@ -1969,6 +1995,18 @@ img {
   opacity: 1;
   visibility: visible;
   pointer-events: initial;
+}
+
+.mobile__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
 }
 
 .mobile-navigation__list {
@@ -2016,7 +2054,7 @@ img {
   padding-top: 302px;
   padding-left: 40px;
   padding-bottom: 64px;
-  margin-top: 0;
+  margin: 0;
 }
 
 .mobile-info__link {
@@ -2046,6 +2084,7 @@ img {
   display: -ms-flexbox;
   display: flex;
   padding-bottom: 48px;
+  margin: 0;
 }
 
 .mobile-social__link {
