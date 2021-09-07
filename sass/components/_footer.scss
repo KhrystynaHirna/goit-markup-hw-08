@@ -69,6 +69,12 @@
 //   }
 // }
 .footer__item--first {
+   @media screen and (max-width: 767px){
+     text-align: center;
+     padding-bottom: 60px;
+   }
+}
+.footer__item--first {
    @media screen and (min-width: 768px) {
      flex-grow: 1;
      text-align: center;

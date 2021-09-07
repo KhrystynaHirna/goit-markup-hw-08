@@ -773,6 +773,12 @@ summary {
   padding-left: 0;
 }
 
+@media screen and (min-width: 480px) {
+  .team-list {
+    padding-bottom: 60px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .team-list {
     -ms-flex-wrap: wrap;
@@ -1121,6 +1127,13 @@ summary {
   .footer__title {
     padding-top: 0;
     text-align: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer__item--first {
+    text-align: center;
+    padding-bottom: 60px;
   }
 }
 
@@ -1631,6 +1644,7 @@ summary {
 }
 
 .portfolio__item-thumb {
+  display: block;
   position: relative;
   overflow: hidden;
 }
