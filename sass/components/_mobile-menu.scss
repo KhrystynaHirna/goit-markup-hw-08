@@ -46,6 +46,7 @@ display: none;
    display: flex;
    flex-direction: column;
    align-content: space-between;
+   justify-content: space-between;
  }
  .mobile-navigation__list {
   list-style: none;
@@ -122,6 +123,3 @@ display: none;
   border-right: 1px solid rgba(33, 33, 33, 0.2);
   margin-right: 10px;
 }
-// .mobile__list > .mobile__item-second {
-//   align-content: flex-end;
-// }

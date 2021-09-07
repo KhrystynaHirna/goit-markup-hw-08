@@ -81,10 +81,9 @@
 .portfolio__item-description {
    @media screen and (min-width:768px) {
    max-width: 354px;
-     &:first-child {
-     height: 146px;
+    .list-item:first-child {
+     max-height: 146px;
    }
-  //  height: 146px;
    }
 }
 .portfolio__item-description {
