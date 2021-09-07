@@ -1,12 +1,15 @@
 // Product-section 
 .product-list {
+  @extend %list;
   @media screen and (min-width:1200px) {
   padding-left: 0;
   padding-right: 0;
-  list-style: none;
-  } 
+  display: flex;
+  justify-content: space-between;
+  }
 }
 .product-list__item {
+  @extend %list;
   @media screen and (min-width:1200px) {
      position: relative;
   }

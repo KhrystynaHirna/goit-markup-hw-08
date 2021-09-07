@@ -40,7 +40,7 @@
   } 
 }
 .header-info__item {
-  @media screen and (min-width: 768px) {
+  @media screen and (max-width: 1199px) {
     color: var(--paragraph-text-color);
   &:hover, &:focus {
     color: var(--accent-color);  
@@ -71,13 +71,14 @@
 .header-info {
   @media screen and (min-width: 1200px) {
   @include flex ($ai: center);
+  align-items: baseline;
 }
 }
 .header-info__item {
   @media screen and (min-width: 1200px) {
   @include flex ($ai: center);
   &:not(:last-child) {
-    margin-right: 50px;
+    margin-right: 30px;
   }
   }
 }

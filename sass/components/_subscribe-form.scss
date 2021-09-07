@@ -18,6 +18,8 @@
 .subscribe-form {
   @media screen and (min-width: 1200px) {
   display: flex;
+  padding: 0;
+  margin-right: auto;
   }
 }
 .subscribe-form__input {
