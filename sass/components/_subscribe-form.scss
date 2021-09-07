@@ -2,9 +2,10 @@
 // Footer subscribe-form
 // MOBILE
 .subscribe-form {
+  @extend %d-flex;
   & .primary-button {
+  @include flex ($ai: center);
   padding: 0;
-  align-items: center;
   margin-left: 12px;
   }
 }
@@ -23,8 +24,6 @@
   }
 }
 .subscribe-form__input {
-  width: 450px;
-  height: 50px;
   border-radius: 4px;
 
   @include border (1px, rgba(255, 255, 255, 0.3));
@@ -48,8 +47,15 @@
   }
 }
 .subscribe-form__input {
+  @media screen and (max-width: 1199px) {
+  width: 450px;
+  height: 50px;
+  }
+}
+.subscribe-form__input {
   @media screen and (min-width: 1200px) {
   width: 358px;
+  height: 50px;
   }
 }
 .subscribe-form__text {
